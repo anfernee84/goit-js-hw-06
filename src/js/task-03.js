@@ -15,7 +15,8 @@ const images = [
 
 document.head.insertAdjacentHTML(
   "beforeend",
-  "<style>.flex-container {display: flex; flex-wrap: nowrap; flex-direction: column;}.flex-item {padding: 5px 5px 5px 5px; margin: 20px 20px 20px 20px; list-style-type: none;}</style>"
+  // "<style>.flex-container {display: flex; flex-wrap: nowrap; flex-direction: column;}.flex-item {padding: 5px 5px 5px 5px; margin: 20px 20px 20px 20px; list-style-type: none;}</style>"
+  "<style>.flex-container {display: flex; flex-wrap: wrap}.flex-item {padding: 5px 5px 5px 5px; margin: 20px 20px 20px 20px; list-style-type: none;}</style>"
 );
 
 const picGallery = document.querySelector(".gallery");
@@ -23,5 +24,4 @@ picGallery.classList.add("flex-container");
 const pictArr = images.map((image) => {
   return `<li class="flex-item"><img src="${image.url}" alt="${image.alt}" width="450" height="300"></li>`;
 });
-picGallery.insertAdjacentHTML("afterbegin", pictArr);
-console.log(headStyle);
+picGallery.insertAdjacentHTML("afterbegin", pictArr.join(""));
