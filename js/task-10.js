@@ -8,7 +8,6 @@ const delButton = document.querySelector("[data-destroy]");
 const divElts = document.querySelector("#boxes");
 
 addButton.addEventListener("click", addButtonHandler);
-
 function addButtonHandler() {
   const inputValue = input.value;
   createBoxes(inputValue);
@@ -30,7 +29,6 @@ function createBoxes(number) {
   // divs.length = 0;
 }
 
-delButton.addEventListener("click", delButtonHandler);
-function delButtonHandler() {
-  document.querySelectorAll(".box").forEach((e) => e.remove());
-}
+delButton.addEventListener("click", () =>
+  document.querySelectorAll(".box").forEach((e) => e.remove())
+);
