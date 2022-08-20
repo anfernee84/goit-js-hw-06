@@ -27,14 +27,15 @@ function createBoxes(number) {
   }
   console.log(divs);
   divElts.append(...divs);
+  divs.length = 0;
 }
 
 delButton.addEventListener("click", delButtonHandler);
 function delButtonHandler() {
   document.querySelectorAll(".box").forEach((e) => e.remove());
-  // document
-  //   .querySelectorAll(".box")
-  //   .forEach((elem) => elem.parentNode.removeChild(elem));
-  window.location.reload(); // cheating ;(
-  // i`m looking for better way to cleare chached divs, cause they doubling when use "Create" after "Clear"
+  // // document
+  // //   .querySelectorAll(".box")
+  // //   .forEach((elem) => elem.parentNode.removeChild(elem));
+  // window.location.reload(); // cheating ;(
+  // // i`m looking for better way to cleare chached divs, cause they doubling when use "Create" after "Clear"
 }

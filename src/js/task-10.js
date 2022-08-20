@@ -28,9 +28,11 @@ function createBoxes(number) {
   console.log(divs);
   divElts.append(...divs);
   divs.length = 0;
+  //
 }
 
 delButton.addEventListener("click", delButtonHandler);
 function delButtonHandler() {
   document.querySelectorAll(".box").forEach((e) => e.remove());
 }
+//
