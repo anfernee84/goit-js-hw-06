@@ -9,9 +9,14 @@ const divElts = document.querySelector("#boxes");
 
 addButton.addEventListener("click", addButtonHandler);
 function addButtonHandler() {
-  const inputValue = input.value;
-  createBoxes(inputValue);
+  createBoxes(input.value);
 }
+
+delButton.addEventListener("click", () => {
+  document.querySelectorAll(".box").forEach((e) => e.remove());
+  input.value = "";
+});
+
 // const divs = [];
 function createBoxes(number) {
   // упоротый читерский for чтоб не обнулять массив divs и размер фигуры перед следующим созданием
@@ -24,11 +29,6 @@ function createBoxes(number) {
     divs.push(div);
     console.log(div);
   }
-  console.log(divs);
   divElts.append(...divs);
   // divs.length = 0;
 }
-
-delButton.addEventListener("click", () =>
-  document.querySelectorAll(".box").forEach((e) => e.remove())
-);
