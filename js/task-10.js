@@ -13,10 +13,10 @@ function addButtonHandler() {
   const inputValue = input.value;
   createBoxes(inputValue);
 }
-const divs = [];
+// const divs = [];
 function createBoxes(number) {
   // упоротый читерский for
-  for (var i = 0, size = 30; i < number; i++, size += 10) {
+  for (var divs = [], i = 0, size = 30; i < number; i++, size += 10) {
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
     div.classList.add("box");
@@ -27,7 +27,7 @@ function createBoxes(number) {
   }
   console.log(divs);
   divElts.append(...divs);
-  divs.length = 0;
+  // divs.length = 0;
 }
 
 delButton.addEventListener("click", delButtonHandler);
