@@ -15,7 +15,7 @@ function addButtonHandler() {
 }
 // const divs = [];
 function createBoxes(number) {
-  // упоротый читерский for
+  // упоротый читерский for чтоб не обнулять массив и размер фигуры перед следующим созданием
   for (var divs = [], i = 0, size = 30; i < number; i++, size += 10) {
     const div = document.createElement("div");
     div.style.backgroundColor = getRandomHexColor();
