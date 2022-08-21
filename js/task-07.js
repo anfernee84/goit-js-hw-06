@@ -1,21 +1,20 @@
 const slider = document.querySelector(`#font-size-control`);
 const span = document.querySelector("#text");
 
+span.style.fontSize = `${slider.value}px`;
 /////////////////////////////////////////////////////////// варіант 1
-// span.style.fontSize = `${slider.value}px`;
-// slider.addEventListener("input", function () {
-//   span.style.fontSize = `${slider.value}px`;
-// });
+// slider.addEventListener(
+//   "input",
+//   () => (span.style.fontSize = `${slider.value}px`)
+// );
 
 ////////////////////////////////////////////////////////// варіант 2
-// span.style.fontSize = `${slider.value}px`;
 // slider.addEventListener(
 //   "mousemove",
 //   () => (span.style.fontSize = `${slider.value}px`)
 // );
 
 ////////////////////////////////////////////////////////// варіант 3
-span.style.fontSize = `${slider.value}px`;
 slider.addEventListener("input", function (event) {
-  span.style.fontSize = event.currentTarget.value + "px";
+  span.style.fontSize = `${slider.value}px`;
 });
