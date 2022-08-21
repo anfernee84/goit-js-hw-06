@@ -16,5 +16,5 @@ span.style.fontSize = `${slider.value}px`;
 
 ////////////////////////////////////////////////////////// варіант 3
 slider.addEventListener("input", function (event) {
-  span.style.fontSize = `${slider.value}px`;
+  span.style.fontSize = event.currentTarget.value + "px";
 });
