@@ -17,6 +17,6 @@ function handleSubmit(event) {
   });
   if (data.email && data.password) {
     console.log(data);
+    event.currentTarget.reset();
   }
-  event.currentTarget.reset();
 }
